@@ -29,4 +29,13 @@ public class TopNav extends ReusableMethods {
     @FindBy(xpath = "//div[@fxlayout='row']/div/img")
     public WebElement homepageLogo;
 
+    @FindBy(xpath = "//div[@role='menu']/div/button")
+    public List<WebElement> hamburgerMenuSubmenus;
+
+    @FindBy(xpath = "(//span[@class='mat-mdc-menu-item-text'])[2]")
+    public WebElement financeButton;
+
+    @FindBy(xpath = "//span[text()='My Finance']")
+    public WebElement myFinanceButton;
+
 }

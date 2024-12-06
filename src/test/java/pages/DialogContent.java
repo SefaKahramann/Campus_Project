@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 import utilities.ReusableMethods;
 
+import java.util.List;
+
 public class DialogContent extends ReusableMethods {
 
     public DialogContent() {
@@ -27,4 +29,6 @@ public class DialogContent extends ReusableMethods {
     @FindBy(xpath = "(//mat-drawer-content[@class='mat-drawer-content']//span)[5]")
     public WebElement textControl;
 
+    @FindBy(xpath = "//span[text()=' Students Fees '] ")
+    public WebElement myFinancePageVerify;
 }
