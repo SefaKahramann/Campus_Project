@@ -248,11 +248,53 @@ public class DialogContent extends ReusableMethods {
     @FindBy(xpath = "//div[contains(text(),'successfully sent')]")
     public WebElement excuseConfirmMsg;
 
+    @FindBy(xpath = "//mat-select[@formcontrolname='theme']")
+    public WebElement themeBtn;
+
+    @FindBy(xpath = "//mat-option[@role='option']")
+    public List<WebElement> themeOptions;
+
+    @FindBy(css = ".mat-toolbar.mat-primary")
+    public WebElement topBar;
+
+    @FindBy(xpath = "//ms-save-button/button")
+    public WebElement saveBtn;
+
+    @FindBy(xpath = "//div[contains(text(),'successfully updated')]")
+    public WebElement updateMsg;
+
+    @FindBy(css = "[formcontrolname='theme']")
+    public WebElement themeControlText;
+
+    @FindBy(xpath = "//*[@role='tab']")
+    public WebElement courseGradeButton;
+
+    @FindBy(xpath = "(//*[@role='tab'])[2]")
+    public WebElement studentTranscriptBtn;
+
+    @FindBy(xpath = "(//*[@role='tab'])[3]")
+    public WebElement transcriptBySubjectBtn;
+
+    @FindBy(xpath = "//span[text()=' Grading ']")
+    public WebElement gradingPageVerify;
+
+    @FindBy(xpath = "//div[@id='all-course']")
+    public WebElement courseGradeTableVerify;
+
+    @FindBy(xpath = "//*[@role='table']")
+    public WebElement studentTranscriptVerify;
+
+    @FindBy(xpath = "//*[contains(text(), 'no data to display')]")
+    public WebElement transcriptBySubjectVerify;
+
     public WebElement getWebElement(String strElementName) {
 
         switch (strElementName) {
             case "usernameBox": return this.usernameBox;
             case "stripeButton": return this.stripeButton;
+            case "courseGradeButton": return  this.courseGradeButton;
+            case "studentTranscriptBtn": return this.studentTranscriptBtn;
+            case "transcriptBySubjectBtn": return this.transcriptBySubjectBtn;
         }
         return null;
     }
