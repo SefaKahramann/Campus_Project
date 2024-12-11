@@ -119,11 +119,11 @@ public class TopNav extends ReusableMethods {
     @FindBy(xpath = "//span[text()='Change Password']")
     public WebElement changePassword;
 
-    @FindBy(xpath = "//div[@fxlayoutalign='start center']/button")
-    public WebElement profileBtn;
 
-    @FindBy(xpath = "//span[text()='Settings']")
-    public WebElement profileSettings;
+
+
+
+
 
     @FindBy(xpath = "//*[@icon='analytics']/button")
     public WebElement gradingButton;

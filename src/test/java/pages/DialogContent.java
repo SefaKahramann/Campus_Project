@@ -248,23 +248,23 @@ public class DialogContent extends ReusableMethods {
     @FindBy(xpath = "//div[contains(text(),'successfully sent')]")
     public WebElement excuseConfirmMsg;
 
-    @FindBy(xpath = "//mat-select[@formcontrolname='theme']")
-    public WebElement themeBtn;
 
-    @FindBy(xpath = "//mat-option[@role='option']")
-    public List<WebElement> themeOptions;
 
-    @FindBy(css = ".mat-toolbar.mat-primary")
-    public WebElement topBar;
 
-    @FindBy(xpath = "//ms-save-button/button")
-    public WebElement saveBtn;
 
-    @FindBy(xpath = "//div[contains(text(),'successfully updated')]")
-    public WebElement updateMsg;
 
-    @FindBy(css = "[formcontrolname='theme']")
-    public WebElement themeControlText;
+
+
+
+
+
+
+
+
+
+
+
+
 
     @FindBy(xpath = "//*[@role='tab']")
     public WebElement courseGradeButton;
