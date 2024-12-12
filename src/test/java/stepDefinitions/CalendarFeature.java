@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.DialogContent;
 import pages.TopNav;
-import utilities.ConfigReader;
 import utilities.GWD;
 
 import java.util.List;
@@ -65,30 +64,39 @@ public class CalendarFeature {
         Assert.assertTrue(dialogContentElement.calendarBtn.isDisplayed());
     }
 
-    @When("The user clicks on these links")
+    @And("The user clicks on these links")
     public void theUserClicksOnTheseLinks() {
         dialogContentElement.myClick(dialogContentElement.weeklyCoursePlanBtn);
         Assert.assertTrue(dialogContentElement.coursePlanTableVerify.isDisplayed());
 
         dialogContentElement.myClick(dialogContentElement.calendarBtn);
+        dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.calendarTableVerify));
         Assert.assertTrue(dialogContentElement.calendarTableVerify.isDisplayed());
-        System.out.println(dialogContentElement.calendarTableVerify.getText());
-    }
-
-    @Then("The user should be redirected to the respective page")
-    public void theUserShouldBeRedirectedToTheRespectivePage() {
     }
 
     @Given("The user is on the Weekly Course Plan page")
     public void theUserIsOnTheWeeklyCoursePlanPage() {
+        dialogContentElement.myClick(dialogContentElement.weeklyCoursePlanBtn);
+        Assert.assertTrue(dialogContentElement.coursePlanTableVerify.isDisplayed());
     }
 
     @Then("The user should view icons to navigate forward and backward \\(Previous, Today, Next) on the page")
     public void theUserShouldViewIconsToNavigateForwardAndBackwardPreviousTodayNextOnThePage() {
+        Assert.assertTrue(dialogContentElement.previousButton.isDisplayed());
+        Assert.assertTrue(dialogContentElement.todayButton.isDisplayed());
+        Assert.assertTrue(dialogContentElement.nextButton.isDisplayed());
     }
 
     @When("The user clicks on these icons")
-    public void theUserClicksOnTheseIcons() {
+    public void theUserClicksOnTheseIcons(DataTable dtIcons) {
+        List<String> icons =dtIcons.asList();
+
+        for (int i = 0; i < icons.size(); i++) {
+            dialogContentElement.myClick(dialogContentElement.getWebElement(icons.get(i)));
+            dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.dateVerify));
+            Assert.assertTrue(dialogContentElement.dateVerify.isDisplayed());
+            System.out.println(dialogContentElement.dateVerify.getText());
+        }
     }
 
     @Then("The user should be redirected to the corresponding date on the calendar")
