@@ -26,7 +26,6 @@ Feature:Calendar Feature Functionality
       | previousButton |
       | todayButton    |
       | nextButton     |
-
     Then  The user should be redirected to the corresponding date on the calendar
 
   Scenario:Viewing Responsible Courses on the Weekly Course Plan Page

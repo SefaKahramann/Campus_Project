@@ -362,14 +362,22 @@ public class DialogContent extends ReusableMethods {
     public WebElement getWebElement(String strElementName) {
 
         switch (strElementName) {
-            case "usernameBox": return this.usernameBox;
-            case "stripeButton": return this.stripeButton;
-            case "courseGradeButton": return  this.courseGradeButton;
-            case "studentTranscriptBtn": return this.studentTranscriptBtn;
-            case "transcriptBySubjectBtn": return this.transcriptBySubjectBtn;
-            case "previousButton": return this.previousButton;
-            case "todayButton": return this.todayButton;
-            case "nextButton": return this.nextButton;
+            case "usernameBox":
+                return this.usernameBox;
+            case "stripeButton":
+                return this.stripeButton;
+            case "courseGradeButton":
+                return this.courseGradeButton;
+            case "studentTranscriptBtn":
+                return this.studentTranscriptBtn;
+            case "transcriptBySubjectBtn":
+                return this.transcriptBySubjectBtn;
+            case "previousButton":
+                return this.previousButton;
+            case "todayButton":
+                return this.todayButton;
+            case "nextButton":
+                return this.nextButton;
         }
         return null;
     }

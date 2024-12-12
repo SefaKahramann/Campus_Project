@@ -59,7 +59,6 @@ public class CalendarFeature {
     public void theUserShouldViewTwoLinksToNavigateToTheWeeklyCoursePlanAndCalendarPages() {
         dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.weeklyCoursePlanBtn));
         Assert.assertTrue(dialogContentElement.weeklyCoursePlanBtn.isDisplayed());
-
         dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.calendarBtn));
         Assert.assertTrue(dialogContentElement.calendarBtn.isDisplayed());
     }
@@ -89,7 +88,7 @@ public class CalendarFeature {
 
     @When("The user clicks on these icons")
     public void theUserClicksOnTheseIcons(DataTable dtIcons) {
-        List<String> icons =dtIcons.asList();
+        List<String> icons = dtIcons.asList();
 
         for (int i = 0; i < icons.size(); i++) {
             dialogContentElement.myClick(dialogContentElement.getWebElement(icons.get(i)));
