@@ -93,17 +93,20 @@ public class FinancePayment {
         dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.feeBalanceButton));
         dialogContentElement.myClick(dialogContentElement.feeBalanceButton);
 
-        dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.feeBalanceDetailText));
-        dialogContentElement.scrollToElement(dialogContentElement.feeBalanceDetailText);
+        dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.fileBalanceDetailText));
+        dialogContentElement.scrollToElement(dialogContentElement.fileBalanceDetailText);
+
+        dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.studentFeesBtn));
+        dialogContentElement.jsClick(dialogContentElement.studentFeesBtn);
 
         topNavElement.wait.until(ExpectedConditions.visibilityOf(topNavElement.newMessageIcon));
         topNavElement.jsClick(topNavElement.newMessageIcon);
 
-        dialogContentElement.wait.until(ExpectedConditions.elementToBeClickable(dialogContentElement.paymentStripeBtn));
-        dialogContentElement.jsClick(dialogContentElement.paymentStripeBtn);
+        dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.viewIconBtn));
+        dialogContentElement.jsClick(dialogContentElement.viewIconBtn);
 
         dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.paymentCompletedText));
-        dialogContentElement.verifyContainsText(dialogContentElement.paymentCompletedText,"completed");
+        dialogContentElement.verifyContainsText(dialogContentElement.paymentCompletedText, "completed");
         Assert.assertTrue(dialogContentElement.paymentCompletedText.isDisplayed());
 
         dialogContentElement.wait.until(ExpectedConditions.visibilityOf(dialogContentElement.newMessagesCloseBtn));

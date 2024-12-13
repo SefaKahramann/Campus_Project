@@ -410,7 +410,7 @@ public class DialogContent extends ReusableMethods {
     @FindBy(xpath = "//mat-dialog-container[contains(@id,'mat-mdc-dialog')]")
     public WebElement submitWindow;
 
-    @FindBy(xpath = "(//td[text()=' 1 $ '])[1]")
+    @FindBy(xpath = "(//td[contains(text(),'1 $')])[1]")
     public WebElement fileBalanceDetailText;
 
     @FindBy(xpath = "(//ms-standard-button[@icon='eye']/button)[1]")
@@ -433,6 +433,9 @@ public class DialogContent extends ReusableMethods {
 
     @FindBy(xpath = "//span[text()=' Published ']")
     public List<WebElement> assingmentsPublished;
+
+    @FindBy(xpath = "//div[@class='ng-star-inserted']/button")
+    public WebElement studentFeesBtn;
 
     public WebElement getWebElement(String strElementName) {
 
