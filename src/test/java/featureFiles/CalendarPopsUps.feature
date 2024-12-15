@@ -1,11 +1,11 @@
-Feature: Calendar PopUps Functionality
+Feature:Calendar PopUps Functionality
 
   Background:
     Given Navigate to Campus
     When  The user types username and password and click login button
     Then  The user verifies login successfully
 
-  Scenario: PopUps Functionality
+  Scenario:PopUps Functionality
     Given The user clicks on the Calendar button on the top navigation bar
       | calendarButton |
 

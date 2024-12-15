@@ -1,4 +1,4 @@
-Feature: Assignment Icons Control Functionality
+Feature:Assignment Icons Control Functionality
 
   Background:
     Given Navigate to Campus

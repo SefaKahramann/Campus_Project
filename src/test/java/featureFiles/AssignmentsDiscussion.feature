@@ -1,4 +1,4 @@
-Feature: Assignment Discussion Functionality
+Feature:Assignment Discussion Functionality
 
   Background:
     Given Navigate to Campus
@@ -7,7 +7,7 @@ Feature: Assignment Discussion Functionality
     And   The user clicks on the Assignment button
     When  The user selects a assignment is selected from the list and views the icons next to the assignment
 
-  Scenario: Discussion Functionality
+  Scenario:Discussion Functionality
     When The user clicks on the Search button by selecting status Results Published and semester All options
     And  The user clicks on the Discussion icon to start a negotiation and verifies the Discussion window
     When The user clicks on the Contacts icon then selects randomly contacts
