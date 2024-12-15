@@ -78,6 +78,8 @@ The following user stories are tested in this project:
 24. **Course Material Access (US-024):** Allows students to access course materials uploaded by teachers. Requires user authentication.
 
 25. **Survey Participation (US-025):** Enables students to participate in surveys conducted by the campus administration. Requires user authentication.
+  ![US025CalendarVidRecord](https://github.com/user-attachments/assets/8e75dac8-f001-4bbc-9980-d8a3f23d6d54)
+
 
 ## Technologies and Tools Used
 
